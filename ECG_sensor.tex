@@ -1,0 +1,82 @@
+\documentclass[10pt]{sigplan-proc-varsize-sensys11}
+
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{hyperref}    % Creates hyperlinks from ref/cite 
+\hypersetup{pdfstartview=FitH}
+\usepackage{graphicx}    % For importing graphics
+\usepackage{url}         %
+
+\renewcommand{\arraystretch}{1.2} % Space out rows in tables
+
+\setlength\paperheight {11in}
+\setlength\paperwidth {8.5in}
+
+% No space between bibliography items:
+\let\oldthebibliography=\thebibliography
+  \let\endoldthebibliography=\endthebibliography
+  \renewenvironment{thebibliography}[1]{%
+    \begin{oldthebibliography}{#1}%
+      \setlength{\parskip}{0ex}%
+      \setlength{\itemsep}{0ex}%
+  }%
+  {%
+    \end{oldthebibliography}%
+  }
+\setlength{\parindent}{5mm}
+
+\begin{document}
+\title{Low-cost ECG Sensing System for In-patient Monitoring}
+\author{
+%{Scribus Primus}\\
+%\affaddr{Primus Address}\\
+%\email{primus@somewhere.com} \and
+%{Scribus Secundus}\\
+%\affaddr{Secundus Address}\\
+%\email{secondus@elsewhere.com}
+}
+
+\conferenceinfo{SenSys'11,} {November 1--4, 2011, Seattle, WA, USA.}
+\CopyrightYear{2011}
+\crdata{XXX-X-XXXXX-XXX-X}
+
+\maketitle
+
+\begin{abstract}
+Here is the abstract. It should be clear, concise and under 200 words.
+
+\end{abstract}
+
+%\category{C.2.1}{Computer-Communication Networks}{Network Architecture and Design}[Wireless communication]
+%\keywords{Collection, CTP, Sensor Network, Routing}
+
+\section{Introduction}
+\label{sec:intro}
+\input{intro.tex}
+
+\section{Background and Related Work}
+\label{sec:related}
+\input{related.tex}
+
+\section{Implementation}
+\label{sec:implementation}
+\input{implementation.tex}
+
+\section{Evaluation}
+\label{sec:eval}
+\input{eval.tex}
+
+\section{Conclusions and Future Work}
+\label{sec:conclusion}
+\input{conclusion.tex}
+
+{\footnotesize
+\bibliographystyle{abbrv}
+\bibliography{ECG_sensor}
+}
+
+\end{document}
